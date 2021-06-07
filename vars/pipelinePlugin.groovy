@@ -34,7 +34,7 @@ def call(body) {
             deploy(DEPLOY_NODE, 'dev', config.devDeployTargets)
         }
         milestone 3
-        def approval = input(message: 'OK to push to production?', ok: 'Yes, push to production.')
+     //   def approval = input(message: 'OK to push to production?', ok: 'Yes, push to production.')
         milestone 4
         if (params.SKIP_PROD_DEPLOY != true && config.prodDeployTargets) {
             println "Deploying to PROD"
