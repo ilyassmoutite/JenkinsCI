@@ -99,7 +99,7 @@ package org.swiftotter
 
     def executeInNode(String nodeName = 'deploy', String sshKey, Closure whatToDo) {
         node (nodeName) {
-            timeout(time: 15, unit: 'MINUTES') {
+            timeout(time: 15, unit: 'HOURS') {
                 withCredentials([file(credentialsId: sshKey, variable: 'SSH_KEY')]) {
                     sh 'chmod 600 ${SSH_KEY}'
                     whatToDo(SSH_KEY)
