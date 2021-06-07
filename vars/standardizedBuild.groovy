@@ -19,7 +19,7 @@ def call(String nodeName = 'build') {
                     sh 'rm -rf scripts'
                     sh 'mkdir -p scripts'
                     dir ('scripts/') {
-                        git  url: 'git@github.com:ilyassmoutite/MagentoCI.git'
+                        git  url: 'https://github.com/ilyassmoutite/MagentoCI.git'
                     }
                     sh 'mkdir -p checkout/scripts.d'
                     sh 'ls -alh'
