@@ -28,7 +28,7 @@ def inputDevDeployTargets = [
 //    [ sshUser: 'deploy', sshHost: '', sshPort: '22', sshPath: '', sshKey: '' ]
 ]
 def inputProdDeployTargets = [
-    [ sshUser: 'deploy', sshHost: '', sshPort: '22', sshPath: '', sshKey: '' ]
+    [ sshUser: 'ubuntu', sshHost: 'ec2-54-74-137-23.eu-west-1.compute.amazonaws.com', sshPort: '22', sshPath: '/home/ubuntu', sshKey: 'Switfotter-key' ]
 ]
 
 // This is what runs the build / deploy pipeline
