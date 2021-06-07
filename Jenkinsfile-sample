@@ -1,5 +1,5 @@
 def overriddenParams = [
-    string(name: 'S3_DEST_BUCKET', defaultValue: 'your-s3-bucket', description: 'The AWS S3 bucket to send the build artifacts to.'),
+    string(name: 'S3_DEST_BUCKET', defaultValue: 'swiftotter-training-jenkins-1', description: 'The AWS S3 bucket to send the build artifacts to.'),
 
     //-- BEGIN: This section is for automated testing.
     string(name: 'CRYPT_KEY', defaultValue: 'your-crypt-key', description: 'Name of Crypt Key Credential'),
@@ -12,7 +12,7 @@ def overriddenParams = [
     //-- BEING: this section is for Magento-specific values.
     string(name: 'THEME', defaultValue: 'your-theme-name', description: 'Name of primary project theme'),
     string(name: 'MAGENTO_VERSION', defaultValue: '2.1', description: 'Current version of Magento'),
-    string(name: 'PACKAGIST', defaultValue: 'your-packagist-composer-crednetials', description: 'Packagist / composer configuration credential name')
+    string(name: 'PACKAGIST', defaultValue: 'packagist-composer-crednetials', description: 'Packagist / composer configuration credential name')
     //-- END
 ]
 
