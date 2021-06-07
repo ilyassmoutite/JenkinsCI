@@ -15,7 +15,7 @@ def call(String nodeName = 'build') {
                     sh 'mkdir -p scripts.d'
                     sh 'ls -alh'
                     sh 'cp --recursive --backup --force "scripts.d/." scripts'
-                    sh 'sudo chmod --recursive +x scripts/'
+                    sh 'chmod --recursive +x scripts/'
 
                     env.PATH = "./scripts:${env.PATH}"
                     sh 'build.sh'   
