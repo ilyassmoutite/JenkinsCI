@@ -24,7 +24,7 @@ def call(String nodeName = 'build') {
                     sh 'mkdir -p checkout/scripts.d'
                     sh 'ls -alh'
                     sh 'cp --recursive --backup --force "checkout/scripts.d/." scripts'
-                    sh 'sudo chmod --recursive +x scripts/'
+                    sh 'chmod --recursive +x scripts/'
 
                     env.PATH = "./scripts:${env.PATH}"
                     sh 'build.sh --magentoVersion ' + params.MAGENTO_VERSION + ' --theme ' + params.THEME + ' --buildId ' + BUILD_NUMBER
