@@ -77,9 +77,9 @@ package org.swiftotter
             sh 'ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no -p ' + sshPort + ' ' + userHost + ' \'mkdir -p ' + sshPath + '/releases\''
         }
         
-        this.executeInNode(nodeName, sshKey) { SSH_KEY ->
-            sh 'scp -i ${SSH_KEY} -P ' + sshPort + ' -v -o StrictHostKeyChecking=no -o \'CompressionLevel 9\' -o \'IPQoS throughput\' ' + buildFile + ' ' + userHost + ':' + sshPath + '/releases/' + buildFile
-        }
+        //this.executeInNode(nodeName, sshKey) { SSH_KEY ->
+          //  sh 'scp -i ${SSH_KEY} -P ' + sshPort + ' -v -o StrictHostKeyChecking=no -o \'CompressionLevel 9\' -o \'IPQoS throughput\' ' + buildFile + ' ' + userHost + ':' + sshPath + '/releases/' + buildFile
+       // }
     }
 
     def deployArtifactOnServer(String nodeName = 'deploy', String sshUser, String sshHost, String sshPort, String sshKey, String sshPath, String httpPath, String buildFile, String buildNumber, magentoVersion) {
