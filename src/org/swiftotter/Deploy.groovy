@@ -60,7 +60,7 @@ package org.swiftotter
         def buildFile = jobName + '-' + buildNumber.toString() + '.tar.gz'
 
         node (nodeName) {
-         //   sh 'rm -f *.tar.gz'
+            sh 'rm -f *.tar.gz'
          //   sh 'aws s3 cp s3://' + s3BucketName + '/jobs/' + buildName + '/' + buildNumber + '/' + outputFile + ' ' + buildFile
         }
 
