@@ -12,7 +12,7 @@ def call(body) {
         
         string(name: 'OUTPUT_FILE', defaultValue: 'build.tar.gz', description: 'Output file name (deployment, downloading from AWS)'),
         string(name: 'BUILD_FILE', defaultValue: 'build' + env.BUILD_NUMBER + '.tar.gz', description: 'Artifact file name'),
-        string(name: 'S3_DEST_BUCKET', defaultValue: 'swiftotter-builds', description: 'The AWS S3 bucket to send the build artifacts to.'),
+        string(name: 'S3_DEST_BUCKET', defaultValue: 'swiftotter-training-jenkins-1', description: 'The AWS S3 bucket to send the build artifacts to.'),
 
         booleanParam(name: 'SKIP_TEST', defaultValue: false, description: 'Whether or not to skip test runner.'),
         booleanParam(name: 'SKIP_DEV_DEPLOY', defaultValue: false, description: 'Whether or not to skip DEV deployment.'),
